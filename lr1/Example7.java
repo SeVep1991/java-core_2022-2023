@@ -12,7 +12,7 @@ public class Example7 {
         System.out.println("Input age: ");
         int age = in.nextInt ();
 
-        System.out.printf("Name: %s Age: %d \n", name, age);
+        System.out.printf("Name: " + name + " Age: " + age);
         in.close();
     }
 }
