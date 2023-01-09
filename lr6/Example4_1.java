@@ -1,19 +1,15 @@
 package lr6;
 
 public class Example4_1 {
-    static int Factorial(int n){
-    int result = 1;
-    for (int i = 1; i <=n; i++ ){
-        result = result*i++;
+    public static void main(String[] args) {
+        System.out.println(Fact1(6));
     }
-    return result;
+
+    static int Fact1(int n) {
+        int result = 1;
+        for (int i = n % 2 == 0 ? 2 : 1; i <= n; i += 2)
+            result *= i;
+
+        return result;
+    }
 }
-
-        public static void main(String[] args){
-            System.out.println(Factorial(5));
-        }
-}
-
-
-
-
