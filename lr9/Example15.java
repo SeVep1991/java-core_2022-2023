@@ -1,44 +1,41 @@
 package lr9;
 
+import java.util.Arrays;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Example15 {
     public static void main(String[] args) {
-        try {
-            Scanner scanner1 = new Scanner(System.in);
-            Scanner scanner2 = new Scanner(System.in);
-            System.out.println("Введите какого размера массив нужен: ");
-            int l = scanner1.nextInt();
-            int newArray[] = new int[l];
-            for (int i = 0; i < newArray.length; i++){
-                newArray[i] = scanner2.nextInt();
-                System.out.print("[" +i+"] " + newArray[i] + " ");
-            }
-            System.out.println();
-            int counter = 0;
-            int num = 0;
-            for (int i = 0; i < newArray.length; i++){
-                if (newArray[i] > 0 ){
-                    num++;
-                    counter = counter + newArray[i];
+            try {
+
+                int average = 0;
+                int count = 0;
+
+                Scanner in = new Scanner(System.in);
+                System.out.print("Введите размер массива: ");
+                int a = in.nextInt();
+                int Array[] = new int[a];
+
+                System.out.print("Введите значения: ");
+                for (int i = 0; i < Array.length; i++) {
+                    Array[i] = in.nextInt();
+                    average = average + Array[i];
+                    if (Array[i] > 0) {
+                        count++;
+                    }
                 }
+
+                int avg = average / count;
+                System.out.println("Среднее значение: " + avg + ", Массив: " + Arrays.toString(Array));
             }
-            int srednee = counter/num;
-            System.out.println(" Среднее значение среди положительных элементов массива: " + srednee);
-            System.out.println(" Значение какой ячейки нужно показать? ");
-            int j = scanner2.nextInt();
-            System.out.println(newArray[j]);
-        }
-        catch (ArithmeticException g ){
-            System.out.println(" ОШИБКА! В массиве нет положительных чисел, происходит деление на 0 при вычислении среднего значения ");
-        }
-        catch (InputMismatchException e) {
-            System.out.println(" ОШИБКА! Используйте целые числа типа int: " +
-                    "1) положительные целые числа для размера массива; " +
-                    "2) числа типа int для заполнения массива ");
-        } catch (ArrayIndexOutOfBoundsException f) {
-            System.out.println(" ОШИБКА! Обращение к несуществующей ячейке ");
+            catch (ArrayIndexOutOfBoundsException e) {
+                System.err.println("Ошибка! Ввод строки, вместо числа.");
+            }
+            catch (InputMismatchException e) {
+                System.err.println("Ошибка! Несоответствие числового типа данных");
+            }
+            catch (ArithmeticException e) {
+                System.out.println("Ошибка! Арифметическая ошибкая: положительные элименты отсутствуют, деление на 0 и т.д.");
+            }
         }
     }
-}

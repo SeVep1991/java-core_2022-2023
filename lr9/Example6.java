@@ -4,7 +4,7 @@ public class Example6 {
     public static void main(String[] args) {
         try {
             System.out.println("0");
-            throw new NullPointerException("ошибка");
+            throw new NullPointerException("Ошибка");
         } catch (ArithmeticException e) {
             System.out.println("1");
         } catch (RuntimeException e) {

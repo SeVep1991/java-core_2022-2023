@@ -9,11 +9,11 @@ public class Example17 {
         try {
             Scanner in = new Scanner(System.in);
 
-            System.out.print("Введите длину массива: ");
+            System.out.print("Введите длину массива:");
             int leength = in.nextInt();
 
             byte Array[] = new byte[leength];
-            System.out.println("Введите значения: ");
+            System.out.println("Введите значения:");
             int summa = 0;
 
             for (int i = 0; i < Array.length; i++) {
@@ -24,7 +24,7 @@ public class Example17 {
 
         }
         catch (InputMismatchException a) {
-            System.out.println("ERROR: Ввод строки вместо числа, выход за границы массива");
+            System.out.println("Ошибка! Ввод строки вместо числа, выход за границы массива");
         }
     }
 }
