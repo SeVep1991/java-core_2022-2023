@@ -35,7 +35,7 @@ public class Example15 {
                 System.err.println("Ошибка! Несоответствие числового типа данных");
             }
             catch (ArithmeticException e) {
-                System.out.println("Ошибка! Арифметическая ошибкая: положительные элименты отсутствуют");
+                System.out.println("Ошибка! Положительные элименты отсутствуют");
             }
         }
     }
