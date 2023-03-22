@@ -15,7 +15,6 @@ import java.util.Scanner;
 public class SearchBookXML {
     public static void main(String[] args) {
         try {
-            ;
             File inputFile = new File("src/lr10/Example1/Example.xml");
             DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
@@ -28,7 +27,6 @@ public class SearchBookXML {
             List<String> search = getAuthor(doc, xpath);
             System.out.println("Книги автора: " +
                     search.toString());
-
         }
 
         catch (Exception e){
